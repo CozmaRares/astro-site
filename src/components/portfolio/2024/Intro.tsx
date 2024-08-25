@@ -7,7 +7,7 @@ export default function Intro() {
   return (
     <section
       id="home"
-      className={`${Line.containerClass} scroll-mt-96`}
+      className={`${Line.containerClass} section scroll-mt-96`}
     >
       <div className="flex flex-col items-center sm:gap-2">
         <Line className="flex-grow" />

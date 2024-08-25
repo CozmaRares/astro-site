@@ -5,7 +5,7 @@ const FeaturedProjects = () => {
   return (
     <section
       id="projects"
-      className="relative scroll-m-48"
+      className="section relative scroll-m-48"
     >
       <h2 className="text-heading absolute -top-16 left-1/2 -translate-x-1/2 font-heading">
         Projects

@@ -40,7 +40,16 @@ export const experience = Object.freeze([
     icon: GraduationCap,
     date: "2021-present",
   },
-]);
+] satisfies ExperienceEntry[]);
+
+type ExperienceEntry = {
+  title: string;
+  company: string;
+  location: string;
+  description: string;
+  icon: LucideIcon;
+  date: string;
+};
 
 export const projectData = Object.freeze({
   featured: [

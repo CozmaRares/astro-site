@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className={Line.containerClass}
+      className={`${Line.containerClass} section`}
     >
       <div className="flex items-center justify-center">
         <Line.breakPoint>

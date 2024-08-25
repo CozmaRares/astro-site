@@ -1,0 +1,30 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Intro from "@/components/portfolio/2024/Intro";
+import About from "@/components/portfolio/2024/About";
+import Experience from "@/components/portfolio/2024/Experience";
+import FeaturedProjects from "@/components/portfolio/2024/FeaturedProjects";
+import Projects from "@/components/portfolio/2024/Projects";
+import Skills from "@/components/portfolio/2024/Skills";
+import Contact from "@/components/portfolio/2024/Contact";
+---
+
+<Layout title="Rares Cozma | 2024 Portfolio">
+  <div
+    class="absolute right-0 top-16 -z-10 h-80 w-[25rem] rounded-full bg-purple-200 blur-[100px] sm:right-8 sm:h-[30rem] sm:w-[45rem] xl:right-48 dark:bg-emerald-800"
+  >
+  </div>
+  <div
+    class="absolute -top-32 right-0 -z-10 h-80 w-[30rem] rounded-full bg-pink-200 blur-[100px] sm:[right:initial] md:left-8 md:h-[25rem] md:w-[40rem] lg:left-12 xl:left-60 dark:bg-cyan-800"
+  >
+  </div>
+  <main class="mb-20 overflow-x-hidden px-4 pt-24 sm:pt-0">
+    <Intro />
+    <About />
+    <Experience />
+    <FeaturedProjects />
+    <Projects />
+    <Skills />
+    <Contact />
+  </main>
+</Layout>

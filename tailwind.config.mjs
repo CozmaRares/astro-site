@@ -11,6 +11,18 @@ export default {
         heading: ["Libre Franklin Variable", "sans-serif"],
         detail: ["Red Hat Display Variable", "sans-serif"],
       },
+      keyframes: {
+        blink: {
+          "0%, 100%": { opacity: "0" },
+          "50%": { opacity: "1" },
+        },
+      },
+      animation: {
+        blink: "blink 1s infinite",
+      },
+      screens: {
+        xs: "400px",
+      },
     },
   },
   plugins: [

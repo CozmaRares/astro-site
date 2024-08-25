@@ -2,6 +2,37 @@ import portrait from "@/assets/images/portfolio/2024/portrait.jpeg";
 import { GithubAlt } from "@/components/FAIcons";
 import Line from "./helpers/Line";
 import { ArrowRight, Download } from "lucide-react";
+import TypeWriter from "./helpers/TypeWriter";
+
+const typewriterActions = Object.freeze([
+  { type: "add", text: "programmer." },
+  { type: "pause", duration: 1000 },
+  { type: "delete", numChars: 11 },
+  { type: "pause", duration: 500 },
+  { type: "add", text: "vim us" },
+  { type: "pause", duration: 150 },
+  { type: "delete", numChars: 8 },
+  { type: "add", text: "arch" },
+  { type: "pause", duration: 150 },
+  { type: "delete", numChars: 4 },
+  { type: "pause", duration: 500 },
+  { type: "add", text: "web developer." },
+  { type: "pause", duration: 2000 },
+  { type: "delete", numChars: 14 },
+  { type: "pause", duration: 500 },
+  { type: "add", text: "full-stack develo" },
+  { type: "pause", duration: 550 },
+  { type: "delete", numChars: 3 },
+  { type: "add", text: "." },
+  { type: "pause", duration: 5000 },
+  { type: "delete", numChars: 15 },
+] as const);
+
+const typewriterSettings = Object.freeze({
+  loop: true,
+  delay: 500,
+  typingSpeed: 80,
+});
 
 export default function Intro() {
   return (
@@ -30,7 +61,14 @@ export default function Intro() {
             </span>
             areș,
           </p>
-          <p>a full-stack dev.</p>
+          <p>
+            a{" "}
+            <TypeWriter
+              actions={typewriterActions}
+              settings={typewriterSettings}
+              initialText="full-stack dev."
+            />
+          </p>
         </h1>
         <div className="mx-auto grid w-1/3 min-w-fit flex-col items-center gap-4 sm:mx-0 sm:w-fit sm:grid-cols-[repeat(3,auto)] md:text-lg">
           <a

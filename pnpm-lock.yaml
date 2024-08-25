@@ -56,9 +56,6 @@ importers:
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
-      use-deep-compare-effect:
-        specifier: ^1.8.1
-        version: 1.8.1(react@18.3.1)
     devDependencies:
       prettier:
         specifier: ^3.3.3
@@ -223,10 +220,6 @@ packages:
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
-
-  '@babel/runtime@7.25.4':
-    resolution: {integrity: sha512-DSgLeL/FNcpXuzav5wfYvHCGvynXkJbn3Zvc3823AEe9nPwW9IK4UoCSS5yGymmQzN0pCPvivtgS6/8U2kkm1w==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/template@7.25.0':
     resolution: {integrity: sha512-aOOgh1/5XzKvg1jvVz7AVrx2piJ2XBi227DHmbY6y+bM9H2FlN+IfecYu4Xl0cNiiVejlsCri89LUsbj8vJD9Q==}
@@ -1795,9 +1788,6 @@ packages:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
 
-  regenerator-runtime@0.14.1:
-    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
-
   rehype-parse@9.0.0:
     resolution: {integrity: sha512-WG7nfvmWWkCR++KEkZevZb/uw41E8TsH4DsY9UxsTbIXCVGbAs4S+r8FrQ+OtH5EEQAs+5UxKC42VinkmpA1Yw==}
 
@@ -2085,12 +2075,6 @@ packages:
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
-
-  use-deep-compare-effect@1.8.1:
-    resolution: {integrity: sha512-kbeNVZ9Zkc0RFGpfMN3MNfaKNvcLNyxOAAd9O4CBZ+kCBXXscn9s/4I+8ytUER4RDpEYs5+O6Rs4PqiZ+rHr5Q==}
-    engines: {node: '>=10', npm: '>=6'}
-    peerDependencies:
-      react: '>=16.13'
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -2568,10 +2552,6 @@ snapshots:
       '@babel/types': 7.25.4
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/runtime@7.25.4':
-    dependencies:
-      regenerator-runtime: 0.14.1
 
   '@babel/template@7.25.0':
     dependencies:
@@ -4236,8 +4216,6 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
-  regenerator-runtime@0.14.1: {}
-
   rehype-parse@9.0.0:
     dependencies:
       '@types/hast': 3.0.4
@@ -4634,12 +4612,6 @@ snapshots:
       browserslist: 4.23.3
       escalade: 3.1.2
       picocolors: 1.0.1
-
-  use-deep-compare-effect@1.8.1(react@18.3.1):
-    dependencies:
-      '@babel/runtime': 7.25.4
-      dequal: 2.0.3
-      react: 18.3.1
 
   util-deprecate@1.0.2: {}
 

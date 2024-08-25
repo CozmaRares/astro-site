@@ -13,9 +13,9 @@ export default function About() {
         </Line.breakPoint>
       </div>
       <h2 className="flex flex-row items-center">
-        <span className="mx-4 h-[1px] grow bg-indigo-400 dark:bg-green-300 xs:ml-10 sm:hidden" />
-        <span className="font-heading text-heading">About me</span>
-        <span className="mx-4 h-[1px] max-w-xs grow bg-indigo-400 dark:bg-green-300 xs:mr-10" />
+        <span className="xs:ml-10 mx-4 h-[1px] grow bg-indigo-400 dark:bg-green-300 sm:hidden" />
+        <span className="text-heading font-heading">About me</span>
+        <span className="xs:mr-10 mx-4 h-[1px] max-w-xs grow bg-indigo-400 dark:bg-green-300" />
       </h2>
       <div className="origin-top">
         <Line className="mx-auto h-full to-indigo-400 dark:to-green-500" />

@@ -20,9 +20,7 @@ export default function Intro() {
         <Line className="flex-grow-[2] bg-gradient-to-t" />
       </div>
       <div className="pb-32 pt-12 sm:pb-52 sm:pt-40">
-        <h1
-          className="xs:text-3xl pb-6 text-center font-heading text-xl font-medium !leading-[1.5] sm:pb-8 sm:text-left sm:text-5xl md:pb-12 md:text-6xl"
-        >
+        <h1 className="xs:text-3xl pb-6 text-center font-heading text-xl font-medium !leading-[1.5] sm:pb-8 sm:text-left sm:text-5xl md:pb-12 md:text-6xl">
           <p>Hey,</p>
           <p>
             I&apos;m{" "}

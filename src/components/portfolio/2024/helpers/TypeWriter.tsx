@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Props = TypeWriterParameters & {
   className?: string;
@@ -20,22 +20,25 @@ export default function TypeWriterComponent({
     settings,
     initialText,
   });
+  const blinkerRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (!disabled) typeWriter?.start();
-    else typeWriter?.stop();
+    if (!disabled) {
+      typeWriter?.start();
+      blinkerRef.current?.classList.remove("hidden");
+    } else {
+      typeWriter?.stop();
+      blinkerRef.current?.classList.add("hidden");
+    }
   }, [disabled, typeWriter, settings?.loop]);
 
   return (
     <span className={cn("inline-block", className)}>
       <span>{text}</span>
       <span
+        ref={blinkerRef}
         aria-hidden
-        className={cn(
-          "inline-block animate-blink font-thin",
-          { hidden: typeWriter?.isStopped() },
-          blinkerClassName,
-        )}
+        className={cn("hidden animate-blink font-thin", blinkerClassName)}
       >
         |
       </span>
@@ -45,15 +48,13 @@ export default function TypeWriterComponent({
 
 type TypeWriterParameters = {
   actions: readonly Action[];
-  settings?:
-    | undefined
-    | Readonly<{
-        loop?: boolean;
-        delay?: number;
-        typingSpeed?: number;
-        deletingSpeed?: number;
-      }>;
-  initialText?: string | undefined;
+  settings?: Readonly<{
+    loop?: boolean;
+    delay?: number;
+    typingSpeed?: number;
+    deletingSpeed?: number;
+  }>;
+  initialText?: string;
 };
 
 function useTypeWriter({

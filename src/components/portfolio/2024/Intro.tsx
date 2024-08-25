@@ -1,3 +1,4 @@
+import portrait from "@/assets/images/portfolio/2024/portrait.jpeg";
 import { GithubAlt } from "@/components/FAIcons";
 import Line from "./helpers/Line";
 import { ArrowRight, Download } from "lucide-react";
@@ -11,7 +12,7 @@ export default function Intro() {
       <div className="flex flex-col items-center sm:gap-2">
         <Line className="flex-grow" />
         <img
-          src="/portfolio/2024/portrait.jpeg"
+          src={portrait.src}
           alt="Rares' portrait"
           width={96}
           height={96}

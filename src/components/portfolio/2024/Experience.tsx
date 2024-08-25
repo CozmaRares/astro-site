@@ -6,7 +6,7 @@ export default function Experience() {
       <h2 className="$font-heading text-heading mb-12 text-center">
         Experience
       </h2>
-      <div className="mt-15 pb-40 sm:pb-72 md:mb-36 md:pb-36">
+      <div className="mt-15 mb-20 md:mb-24">
         {experience.map(
           (
             { title, location, description, icon: Icon, date, company },

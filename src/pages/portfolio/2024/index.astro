@@ -1,4 +1,6 @@
 ---
+import Styles from "@/components/portfolio/2024/helpers/Styles.astro";
+
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/portfolio/2024/Header";
 import Intro from "@/components/portfolio/2024/Intro";
@@ -11,13 +13,16 @@ import Contact from "@/components/portfolio/2024/Contact";
 ---
 
 <Layout title="Rares Cozma | 2024 Portfolio">
-  <div class="bg-gray-100 text-gray-950 dark:bg-gray-900 dark:text-gray-50">
+  <Styles />
+  <div
+    class="bg-gray-100 font-default text-gray-950 dark:bg-gray-900 dark:text-gray-50"
+  >
     <div
-      class="absolute right-0 top-16 -z-10 h-80 w-[25rem] rounded-full bg-purple-200 blur-[100px] sm:right-8 sm:h-[30rem] sm:w-[45rem] xl:right-48 dark:bg-emerald-800"
+      class="absolute right-0 top-16 -z-10 h-80 w-[25rem] rounded-full bg-purple-200 blur-[100px] dark:bg-emerald-800 sm:right-8 sm:h-[30rem] sm:w-[45rem] xl:right-48"
     >
     </div>
     <div
-      class="absolute -top-32 right-0 -z-10 h-80 w-[30rem] rounded-full bg-pink-200 blur-[100px] sm:[right:initial] md:left-8 md:h-[25rem] md:w-[40rem] lg:left-12 xl:left-60 dark:bg-cyan-800"
+      class="absolute -top-32 right-0 -z-10 h-80 w-[30rem] rounded-full bg-pink-200 blur-[100px] dark:bg-cyan-800 sm:[right:initial] md:left-8 md:h-[25rem] md:w-[40rem] lg:left-12 xl:left-60"
     >
     </div>
     <main class="mb-20 overflow-x-hidden px-4 pt-24 sm:pt-0">

@@ -5,7 +5,13 @@ export default {
   darkMode: "class",
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        default: ["Inter Variable", "sans-serif"],
+        heading: ["Libre Franklin Variable", "sans-serif"],
+        detail: ["Red Hat Display Variable", "sans-serif"],
+      },
+    },
   },
   plugins: [
     plugin(({ theme, addUtilities }) => {

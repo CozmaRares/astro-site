@@ -1,0 +1,109 @@
+<style is:global>
+  /* inter-latin-wght-normal */
+  @font-face {
+    font-family: "Inter Variable";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(@fontsource-variable/inter/files/inter-latin-wght-normal.woff2)
+      format("woff2-variations");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* libre-franklin-latin-wght-normal */
+  @font-face {
+    font-family: "Libre Franklin Variable";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(@fontsource-variable/libre-franklin/files/libre-franklin-latin-wght-normal.woff2)
+      format("woff2-variations");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* red-hat-display-latin-wght-normal */
+  @font-face {
+    font-family: "Red Hat Display Variable";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300 900;
+    src: url(@fontsource-variable/red-hat-display/files/red-hat-display-latin-wght-normal.woff2)
+      format("woff2-variations");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  main > section {
+    max-width: 65rem;
+    margin-inline: auto;
+    scroll-margin-top: 8rem;
+  }
+
+  .line-container {
+    --col-1: 4rem;
+    display: grid;
+    grid-template-columns: var(--col-1) minmax(0, 1fr);
+  }
+  @media (min-width: 400px) {
+    .line-container {
+      --col-1: 5rem;
+    }
+  }
+  @media (min-width: 640px) {
+    .line-container {
+      -moz-column-gap: 3rem;
+      column-gap: 3rem;
+      --col-1: 6rem;
+    }
+  }
+  .border-card {
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+  :is(.dark .border-card) {
+    border-color: hsla(0, 0%, 100%, 0.3);
+  }
+  .card {
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+  :is(.dark .card) {
+    border-color: hsla(0, 0%, 100%, 0.3);
+  }
+  .card {
+    border-radius: 0.75rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(224 231 255 / var(--tw-bg-opacity));
+  }
+  :is(.dark .card) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(9 19 3 / var(--tw-bg-opacity));
+  }
+  .text-heading {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  @media (min-width: 640px) {
+    .text-heading {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+  .grid-like-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    justify-content: center;
+  }
+  .grid-like-flex > * {
+    width: calc((100% - var(--gap) * (var(--cols) - 1)) / var(--cols, 1));
+  }
+</style>

@@ -168,3 +168,26 @@ export type FeaturedProjectType = Prettify<
 >;
 
 export type Prettify<T> = { [K in keyof T]: T[K] };
+
+export const skills = Object.freeze([
+  "React",
+  "JavaScript",
+  "TypeScript",
+  "Next.js",
+  "Node.js",
+  "Astro",
+  "HTML",
+  "CSS",
+  "TailwindCSS",
+  "Express",
+  "Vite",
+  "Git",
+  "C/C++",
+  "Makefile",
+  "Java",
+  "Docker",
+  "PHP",
+  "Shell Scripts",
+  "Lua",
+  "Rust",
+] as const);

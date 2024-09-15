@@ -47,7 +47,7 @@ export default function Intro() {
           alt="Rares' portrait"
           width={96}
           height={96}
-          className="aspect-square w-[96px] rounded-full neon-indigo-lg dark:neon-green-lg"
+          className="aspect-square dark:brightness-[0.70] w-[96px] rounded-full neon-indigo-lg dark:neon-green-lg"
         />
         <Line className="flex-grow-[2] bg-gradient-to-t" />
       </div>

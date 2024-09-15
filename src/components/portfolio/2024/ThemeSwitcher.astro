@@ -8,23 +8,13 @@ import { Moon, Sun } from "lucide-react";
   id="themeSwitcher"
   class="fixed bottom-5 right-5 w-fit scale-125 rounded-full bg-gray-100 p-1.5 outline-none neon-indigo hover:scale-[1.4] focus:scale-[1.4] active:scale-[1.3] motion-safe:transition-transform dark:bg-gray-950 dark:neon-green"
 >
-  <span data-icon="light">
+  <span class="dark:hidden">
     <Sun />
   </span>
-  <span data-icon="dark">
+  <span class="hidden dark:block">
     <Moon />
   </span>
 </button>
-
-<style>
-  #themeSwitcher[data-theme="light"] [data-icon="dark"] {
-    display: none;
-  }
-
-  #themeSwitcher[data-theme="dark"] [data-icon="light"] {
-    display: none;
-  }
-</style>
 
 <script is:inline>
   const themeSwitcher = document.getElementById("themeSwitcher");
@@ -58,14 +48,14 @@ import { Moon, Sun } from "lucide-react";
   document.addEventListener("DOMContentLoaded", () => {
     const localTheme = window.localStorage.getItem("theme");
 
-    if (localTheme)
-      if (localTheme === "dark") {
-        setDark();
-      } else {
-        setLight();
-      }
-    else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      document.body.classList.add("dark");
+    if (
+      localTheme === "dark" ||
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setDark();
+      console.log("dark");
+    } else {
+      setLight();
     }
   });
 </script>
